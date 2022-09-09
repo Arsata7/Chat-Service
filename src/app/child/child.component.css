@@ -1,0 +1,140 @@
+.chat-window {
+  padding: 50px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chat-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid;
+  border-bottom: none;
+  height: 150px;
+  width: 100%;
+  background-color: rgb(84, 84, 248);
+}
+.chat-haeader img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.chat-info h4 {
+  font-size: 30px;
+  color: #fff;
+}
+.chat-info h6 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+.time h6 {
+  color: rgb(201, 193, 193);
+  font-size: 17px;
+}
+.receiver {
+  color: #fff;
+  background: #007bff;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 3px;
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+}
+.sender {
+  background: #efefef;
+  color: black;
+  padding: 2px 4px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 3px;
+  display: flex;
+  max-width: 50%;
+  align-self: flex-end;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+}
+.icons img {
+  display: flex;
+  padding: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.chat-page {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 600px;
+  width: 100%;
+  border: 1px solid;
+  overflow: scroll;
+}
+.msg-inbox {
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+}
+.msg-appear {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.msg {
+  width: fit-content;
+}
+.chat-msg img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+.msg-bottom {
+  display: flex;
+  justify-content: center;
+  width: 602px;
+}
+.msg-bottom input {
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+}
+.input-group {
+  display: flex;
+  border: 1px solid;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+  border-top: none;
+  height: 50px;
+  width: 100%;
+  background-color: lightblue;
+}
+.send-box {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.send-box img {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(50, 212, 50);
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+}

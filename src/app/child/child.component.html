@@ -1,0 +1,64 @@
+<div class="chat-window">
+  <div
+    class="chat-header"
+    [ngStyle]="{
+      'background-color': userID === 1 ? 'MediumSeaGreen' : 'orange'
+    }"
+  >
+    <div *ngIf="userID === 1" class="chat-haeader">
+      <img src="assets\images\man-portrait.jpg" />
+    </div>
+    <div *ngIf="userID === 2" class="chat-haeader">
+      <img src="assets\images\woman-portrait.jpg" />
+    </div>
+    <div class="chat-info">
+      <h4 *ngIf="userID === 1">Brad Pitt</h4>
+      <h4 *ngIf="userID === 2">Halle Berry</h4>
+      <div class="time">
+        <h6>3 hours ago...</h6>
+      </div>
+    </div>
+    <div class="icons">
+      <img src="assets\Icons\call.png" />
+      <img src="assets\Icons\video-camera.png" />
+      <img src="assets\Icons\info.png" />
+    </div>
+  </div>
+  <div class="chat-page">
+    <div class="msg-inbox">
+      <div class="msg-appear">
+        <div
+          *ngFor="let message of messages"
+          class="msg"
+          [ngClass]="{
+            receiver: message.userID === userID,
+            sender: message.userID !== userID
+          }"
+        >
+          <p>{{ message.message }}</p>
+          <div *ngIf="message.userID === 1" class="chat-msg">
+            <img src="{{ message.picture }}" />
+          </div>
+          <div *ngIf="message.userID !== 1" class="chat-msg">
+            <img src="{{ message.picture }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="msg-bottom">
+    <form [formGroup]="form" class="input-group">
+      <input
+        input
+        type="text"
+        formControlName="message"
+        placeholder="write message..."
+      />
+      <div class="send-box">
+        <button (click)="displayMessages()" class="submit">
+          <i><img src="assets\Icons\send.png" /></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
